@@ -1,0 +1,53 @@
+*{
+    margin:0;
+    padding:0
+
+}
+.container{
+    display: flex;
+}
+main{
+    width: 100%;
+    padding:20px;
+
+}
+.sidebar{
+    background:grey;
+    color: black;
+    height:100vh;
+}
+.top-section{
+    display: flex;
+    align-items:center;
+    padding:20px 15px;
+
+}
+.logo{
+    font-size:30px;
+
+}
+.bars{
+    display: flex;
+    font-size: 20px;
+    margin-left: 20px;
+}
+.link{
+    display: flex;
+    color: black;
+    padding:20px 15px;
+    gap:20px;
+}
+.link:hover{
+    background:lightblue;
+    color: white;
+}
+
+.link, .link-text{
+    font-size:20;
+}
+
+.active{
+    background:lightblue;
+    color: white;
+
+}
