@@ -3,11 +3,13 @@ import React from 'react';
 import './App.css';
 import{ BrowserRouter, Route,Routes} from "react-router-dom";
 
-import NewExpense from './components/newexpenses/NewExpenses';
-import Expenses from './components/expenses/ExpenseList';
+
 import Dashboard from './components/pages/Dashboard.js';
 import About from './components/pages/About.js';
 import Sidebar from './components/dashboard/Sidebar'
+import ExpenseList from './components/expenses/ExpenseList';
+import NewExpenses from './components/newexpenses/NewExpenses';
+
 const App=()=> {
 
   const [expenses,setExpenses]=useState('');
@@ -22,16 +24,34 @@ const App=()=> {
        };
 
   return (
+   
     
-  <div>
-    
-<NewExpense onAddExpense= {addExpenseHandler}/>
-  <Expenses items={expenses}/>
+    <BrowserRouter>
+    <Sidebar>
 
-  </div>
+   
+  
+    <Routes>
+    <Route path="/" element={<Dashboard/>}/>
+      <Route path="/dashboard" element={<Dashboard/>}/>
+      <Route path="/about" element={<About/>}/>
+      <Route path="/add/expenses" element={<NewExpenses/>}/>
+      <Route path="/view/expense" element={<ExpenseList  /> }/>
+    
+      
+      
+    
+    </Routes>
+    </Sidebar>
+    </BrowserRouter>
+   
     
   
 );
+
+    
+  
+
 
     
      
