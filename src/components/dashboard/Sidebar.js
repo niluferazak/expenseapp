@@ -11,11 +11,11 @@ import {
 
 import { NavLink } from "react-router-dom";
 
-const Sidebar = ({ Children }) => {
+const Sidebar = ({Children }) => {
   const menuItems = [
     {
       path: "/",
-      name: "dashboard",
+      name: "Dashboard",
       icon: <FaTh />,
     },
 
@@ -30,11 +30,7 @@ const Sidebar = ({ Children }) => {
       icon: <FaRegChartBar />,
     },
 
-    {
-      path: "/view/expenses",
-      name: "Expense List",
-      icon: <FaThList />,
-    },
+   
   ];
   return (
     <div className="container">

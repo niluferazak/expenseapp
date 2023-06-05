@@ -1,13 +1,12 @@
 import React from "react";
+import Sidebar from "../dashboard/Sidebar";
 
-
-
-
-const About=()=>{
-   <div>
-    <hi>
-        About
-    </hi>
-   </div>
+function About() {
+  return (
+    <div>
+      <Sidebar />
+      <h1>about</h1>
+    </div>
+  );
 }
-   export default About;
+export default About;

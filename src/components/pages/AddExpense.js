@@ -1,12 +1,34 @@
-import React from "react";
+import React,{useState} from "react";
+
+import NewExpenses from "../newexpenses/NewExpenses";
+import Sidebar from "../dashboard/Sidebar";
+import ExpenseList from "../expenses/ExpenseList";
+import { useState } from "react";
 
 
 
-const AddExpense=()=>{
+
+const AddExpense=(props)=>{
+   
+   const [expenses,setExpenses]=useState('');
+   
+ 
+   const addExpenseHandler=(expense)=>{
+
+     setExpenses((prevExpenses)=>{
+       return [expense,...prevExpenses];
+     });
+     
+
+   };
    <div>
-    <hi>
-        Expenses
-    </hi>
+<Sidebar/>
+
+
+   <NewExpenses onAddExpense= {addExpenseHandler}/>
+   <ExpenseList items={expenses} />
+   
+   
    </div>
 }
    export default AddExpense;

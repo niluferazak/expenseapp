@@ -1,20 +1,18 @@
-*{
-    margin:0;
-    padding:0
 
-}
 .container{
     display: flex;
 }
 main{
     width: 100%;
     padding:20px;
+   
 
 }
 .sidebar{
     background:grey;
     color: black;
     height:100vh;
+    
 }
 .top-section{
     display: flex;

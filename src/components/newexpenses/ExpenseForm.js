@@ -57,6 +57,7 @@ import Sidebar from '../dashboard/Sidebar';
     <form onSubmit={submitHandler}>
     <div className='new-expense__controls'>
         <Sidebar/>
+        <div>
         <div className='new-expense__control'>
             <label>
                 Title
@@ -81,7 +82,7 @@ import Sidebar from '../dashboard/Sidebar';
                Date
             </label>
             <input type="date"
-             min="2019-01-01" max="2023-03-31" 
+             min="2019-01-01" max="2023-06-31" 
              value={enteredDate}
             onChange={dateChangeHandler}/>
 
@@ -91,6 +92,8 @@ import Sidebar from '../dashboard/Sidebar';
         <button type='submit'>
             Add Expense
         </button>
+
+        </div>
 
     </div>
     </form>
